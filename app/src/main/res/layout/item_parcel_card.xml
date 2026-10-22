@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    app:cardBackgroundColor="#3E2723"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ── TOP SECTION ── -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="#2C1810">
+
+            <!-- Decorative large faint circle background -->
+            <View
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button_background_circle"
+                android:backgroundTint="#3E2723"
+                android:alpha="0.4" />
+
+            <!-- Decorative small circle top-right -->
+            <View
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="-20dp"
+                android:layout_marginEnd="-20dp"
+                android:background="@drawable/button_background_circle"
+                android:backgroundTint="#5D3A2A"
+                android:alpha="0.6" />
+
+            <!-- Decorative small circle bottom-left -->
+            <View
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom|start"
+                android:layout_marginBottom="-15dp"
+                android:layout_marginStart="-15dp"
+                android:background="@drawable/button_background_circle"
+                android:backgroundTint="#5D3A2A"
+                android:alpha="0.5" />
+
+            <!-- Centre info block -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- Package icon -->
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_menu_send"
+                    app:tint="#E9E0C3"
+                    android:alpha="0.9" />
+
+                <!-- Date added -->
+                <TextView
+                    android:id="@+id/tv_date_added"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="09/03/2026"
+                    android:textColor="#BCAAA4"
+                    android:textSize="12sp"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+
+            <!-- Brand pill — top left -->
+            <TextView
+                android:id="@+id/tv_brand_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="12dp"
+                android:background="@drawable/bg_signup_input"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="5dp"
+                android:text="Amazon"
+                android:textColor="#3E2723"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Type badge — top right -->
+            <TextView
+                android:id="@+id/tv_parcel_type_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="12dp"
+                android:background="@drawable/button_background_stroke"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="e-commerce"
+                android:textColor="#E9E0C3"
+                android:textSize="11sp" />
+
+        </FrameLayout>
+
+        <!-- ── DIVIDER LINE ── -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#5D4037"
+            android:alpha="0.5" />
+
+        <!-- ── BOTTOM SECTION ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="14dp">
+
+            <!-- Name + room -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_resident_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resident Name"
+                    android:textColor="#E9E0C3"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:id="@+id/tv_parcel_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Room 204  •  Serenity New Boys"
+                    android:textColor="#BCAAA4"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Arrow icon -->
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_media_next"
+                app:tint="#BCAAA4"
+                android:alpha="0.7" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Light beige base color -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#E9E0C3" />
+        </shape>
+    </item>
+    <!-- Dark brown curved shapes -->
+    <item>
+        <vector
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="412dp"
+            android:height="892dp"
+            android:viewportWidth="412"
+            android:viewportHeight="892">
+            <path
+                android:fillColor="#5D4037"
+                android:pathData="M 0,0 L 412,0 L 412,250 C 250,500 150,300 0,450 Z"/>
+            <path
+                android:fillColor="#5D4037"
+                android:pathData="M 0,892 L 412,892 L 412,700 C 250,850 150,600 0,800 Z"/>
+        </vector>
+    </item>
+</layer-list>

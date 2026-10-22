@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Animated tick circle -->
+    <FrameLayout
+        android:id="@+id/fl_tick_container"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp">
+
+        <!-- Green circle background -->
+        <View
+            android:id="@+id/v_tick_circle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background_circle"
+            android:backgroundTint="#4CAF50" />
+
+        <!-- Animated tick vector -->
+        <ImageView
+            android:id="@+id/iv_tick"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:src="@drawable/avd_tick" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Successfully Registered!"
+        android:textColor="#E9E0C3"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Your account has been created successfully!"
+        android:textColor="#BCAAA4"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_success_done"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Done"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="25dp" />
+
+</LinearLayout>

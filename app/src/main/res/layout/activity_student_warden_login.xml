@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3E2723"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:context=".StudentWardenLoginActivity">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="Admin Login"
+            android:textColor="#E9E0C3"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_input_field"
+                android:backgroundTint="#E9E0C3"
+                android:drawableStart="@drawable/ic_username"
+                android:drawablePadding="12dp"
+                android:hint="Username"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#3E2723"
+                android:textColorHint="#6D4C41"
+                app:drawableTint="#3E2723" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_input_field"
+                android:backgroundTint="#E9E0C3"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="10dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_building"
+                    app:tint="#3E2723" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/actv_building"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="@null"
+                    android:hint="Select Building"
+                    android:textColor="#3E2723"
+                    android:textColorHint="#6D4C41"
+                    android:textSize="16sp"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:dropDownHeight="200dp"
+                    android:dropDownVerticalOffset="5dp"
+                    android:completionThreshold="1"
+                    android:drawableEnd="@android:drawable/arrow_down_float"
+                    android:drawableTint="#3E2723"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_input_field"
+                android:backgroundTint="#E9E0C3"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="12dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textColor="#3E2723"
+                android:textColorHint="#6D4C41"
+                app:drawableTint="#3E2723" />
+
+            <!-- Restored Radio Buttons -->
+            <RadioGroup
+                android:id="@+id/rg_role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_warden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:buttonTint="#E9E0C3"
+                    android:text="Warden"
+                    android:textColor="#E9E0C3" />
+
+                <RadioButton
+                    android:id="@+id/rb_security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:buttonTint="#E9E0C3"
+                    android:text="Security"
+                    android:textColor="#E9E0C3" />
+
+                <RadioButton
+                    android:id="@+id/rb_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#E9E0C3"
+                    android:checked="true"
+                    android:text="Admin"
+                    android:textColor="#E9E0C3" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <CheckBox
+                android:id="@+id/cb_remember_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember me"
+                android:textColor="#E9E0C3"
+                android:buttonTint="#E9E0C3"
+                android:textSize="14sp"/>
+
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="#FF8A80"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#E9E0C3"
+            android:text="Login"
+            android:textColor="#3E2723"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:paddingHorizontal="10dp">
+
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#E9E0C3" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:text="or" android:textColor="#E9E0C3" android:textSize="16sp" />
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#E9E0C3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/social_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="30dp">
+
+            <ImageButton
+                android:id="@+id/btn_phone"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background_circle"
+                android:backgroundTint="#E9E0C3"
+                android:src="@drawable/ic_phone"
+                android:padding="14dp"
+                android:scaleType="fitCenter"
+                app:tint="#3E2723"/>
+
+            <ImageButton
+                android:id="@+id/btn_google"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/button_background_circle"
+                android:backgroundTint="#E9E0C3"
+                android:src="@drawable/google"
+                android:padding="14dp"
+                android:scaleType="fitCenter"/>
+
+            <ImageButton
+                android:id="@+id/btn_apple"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/button_background_circle"
+                android:backgroundTint="#E9E0C3"
+                android:src="@drawable/apple"
+                android:padding="14dp"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textColor="#E9E0C3"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="#FF8A80"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
